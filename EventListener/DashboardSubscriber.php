@@ -11,7 +11,7 @@
 
 namespace MauticPlugin\MauticDashboardWarmBundle\EventListener;
 
-use Mautic\CoreBundle\EventListener\CommonSubscriber;
+use Symfony\Component\EventDispatcher\EventSubscriberInterface;
 use Mautic\CoreBundle\Helper\CoreParametersHelper;
 use Mautic\CoreBundle\Helper\PathsHelper;
 use Mautic\DashboardBundle\DashboardEvents;
@@ -22,7 +22,7 @@ use MauticPlugin\MauticDashboardWarmBundle\Helper\SettingsHelper;
 /**
  * Class DashboardSubscriber.
  */
-class DashboardSubscriber extends CommonSubscriber
+class DashboardSubscriber implements EventSubscriberInterface
 {
     /** @var CoreParametersHelper */
     protected $coreParametersHelper;
